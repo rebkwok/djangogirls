@@ -137,6 +137,8 @@ RAVEN_CONFIG = {
     'dsn': os.environ.get('SENTRY_DSN')
 }
 
+APPEND_SLASH = True
+
 try:
     from .local_settings import *
 except:
