@@ -48,7 +48,8 @@ INSTALLED_APPS = (
     'storages',
     'markdown_deux',
 
-    'core'
+    'core',
+    'jobs',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -135,6 +136,8 @@ STATICFILES_FINDERS = (
 RAVEN_CONFIG = {
     'dsn': os.environ.get('SENTRY_DSN')
 }
+
+APPEND_SLASH = True
 
 try:
     from .local_settings import *
