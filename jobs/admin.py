@@ -10,6 +10,7 @@ def make_published(modeladmin, request, queryset):
     queryset.update()
 make_published.short_description = "Mark selected as published"
 
+
 class JobAdmin(admin.ModelAdmin):
     list_display = ['title', 'company', 'reviewer', 'published']
     ordering = ['title']

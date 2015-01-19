@@ -3,7 +3,9 @@ from django.template.response import TemplateResponse
 
 from .models import Job
 
+# change to generic class views (use get_queryset function)
 def jobs(request):
+    # this will eventually need to filter on expiration date too
     job_offers = Job.objects.filter(published=True)
     return render(
         request, 
